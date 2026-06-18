@@ -4,7 +4,8 @@
   const state = {
     manifest: null,
     dims: [],
-    selected: {}, // key -> value
+    selected: {}, // key -> value (or undefined when not selected)
+    currentSrc: null,
   };
 
   const els = {
@@ -20,47 +21,42 @@
     return dim.values || [];
   }
 
-  // Values reachable for a dimension given the currently selected data type.
-  // (Within each data type the configuration grid is complete, so we only need
-  // to constrain by data type — this avoids dead-ends when switching types.)
+  function selectionCount() {
+    return state.dims.filter((d) => state.selected[d.key] != null).length;
+  }
+
+  // Values reachable for `key` given every OTHER currently-selected dimension.
+  // Unselected dimensions act as wildcards, so the user can never get stuck:
+  // any conflicting choice can be cleared to free up other options.
   function availableValues(key) {
-    if (key === "data_type") {
-      return new Set(state.manifest.plots.map((p) => p.data_type));
-    }
-    const dt = state.selected.data_type;
-    return new Set(
-      state.manifest.plots.filter((p) => p.data_type === dt).map((p) => p[key])
-    );
-  }
-
-  // The single plot matching every current selection (or null).
-  function currentPlot() {
-    const matches = state.manifest.plots.filter((p) =>
-      state.dims.every((d) => p[d.key] === state.selected[d.key])
-    );
-    return matches.length ? matches[0] : null;
-  }
-
-  // Fix dimension `key` to `value`, then snap every other dimension to the
-  // nearest existing plot (the one sharing the most current selections).
-  function selectValue(key, value) {
-    const candidates = state.manifest.plots.filter((p) => p[key] === value);
-    if (!candidates.length) return;
-
-    let best = candidates[0];
-    let bestScore = -1;
-    for (const p of candidates) {
-      let score = 0;
+    const result = new Set();
+    for (const p of state.manifest.plots) {
+      let ok = true;
       for (const d of state.dims) {
         if (d.key === key) continue;
-        if (p[d.key] === state.selected[d.key]) score++;
+        const sel = state.selected[d.key];
+        if (sel != null && p[d.key] !== sel) {
+          ok = false;
+          break;
+        }
       }
-      if (score > bestScore) {
-        bestScore = score;
-        best = p;
-      }
+      if (ok) result.add(p[key]);
     }
-    for (const d of state.dims) state.selected[d.key] = best[d.key];
+    return result;
+  }
+
+  // The plot matching the full selection, only when all dimensions are chosen.
+  function currentPlot() {
+    if (selectionCount() !== state.dims.length) return null;
+    return (
+      state.manifest.plots.find((p) =>
+        state.dims.every((d) => p[d.key] === state.selected[d.key])
+      ) || null
+    );
+  }
+
+  function toggleValue(key, value) {
+    state.selected[key] = state.selected[key] === value ? undefined : value;
     render();
   }
 
@@ -68,6 +64,7 @@
     els.selectors.innerHTML = "";
     for (const d of state.dims) {
       const avail = availableValues(d.key);
+      const selectedVal = state.selected[d.key];
 
       const field = document.createElement("div");
       field.className = "field";
@@ -83,9 +80,11 @@
         const btn = document.createElement("button");
         btn.type = "button";
         btn.textContent = val;
-        if (val === state.selected[d.key]) btn.classList.add("active");
-        if (!avail.has(val)) btn.disabled = true;
-        btn.addEventListener("click", () => selectValue(d.key, val));
+        const isActive = val === selectedVal;
+        if (isActive) btn.classList.add("active");
+        // Never disable the active value (so it can always be cleared).
+        if (!isActive && !avail.has(val)) btn.disabled = true;
+        btn.addEventListener("click", () => toggleValue(d.key, val));
         options.appendChild(btn);
       }
 
@@ -97,13 +96,21 @@
   }
 
   function updateViewer() {
+    const chosen = selectionCount();
+    const total = state.dims.length;
     const plot = currentPlot();
+
     if (!plot) {
-      els.status.textContent = "No plot matches this combination.";
+      state.currentSrc = null;
       els.iframe.hidden = true;
+      els.iframe.removeAttribute("src");
       els.placeholder.hidden = false;
-      els.placeholder.textContent = "No plot available for this combination.";
       els.caption.innerHTML = "";
+      els.placeholder.textContent =
+        chosen < total
+          ? `Select all ${total} options to display a plot (${chosen}/${total} chosen).`
+          : "No plot available for this combination.";
+      els.status.textContent = "";
       return;
     }
 
@@ -115,14 +122,13 @@
         ? ` &nbsp;<span style="opacity:.7">(group label: ${plot.group_label})</span>`
         : "");
 
-    els.placeholder.hidden = false;
-    els.placeholder.textContent = "Loading plot…";
-    els.iframe.hidden = true;
-    els.iframe.onload = () => {
-      els.placeholder.hidden = true;
-      els.iframe.hidden = false;
-    };
-    els.iframe.src = plot.path;
+    // Only (re)load the iframe when the target actually changes.
+    if (state.currentSrc !== plot.path) {
+      state.currentSrc = plot.path;
+      els.iframe.src = plot.path;
+    }
+    els.placeholder.hidden = true;
+    els.iframe.hidden = false;
   }
 
   function init(manifest) {
@@ -134,11 +140,10 @@
       return;
     }
 
-    // Default selection = first plot (a guaranteed-valid combination).
-    const first = manifest.plots[0];
-    for (const d of state.dims) state.selected[d.key] = first[d.key];
+    // Start with nothing selected; the plot appears once a full set is chosen.
+    for (const d of state.dims) state.selected[d.key] = undefined;
 
-    els.footerCount.textContent = `${manifest.count} plots indexed · plot type: ${manifest.plot_type}`;
+    els.footerCount.textContent = `${manifest.count} plots indexed`;
     render();
   }
 

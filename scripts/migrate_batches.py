@@ -18,8 +18,9 @@ This script is idempotent: re-running overwrites existing files.
 """
 from __future__ import annotations
 
-import shutil
 from pathlib import Path
+
+from strip_titles import strip_title
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -32,6 +33,12 @@ RNA_GROUP_LABELS = {
     "SKCM": "breslow_thickness_at_diagnosis",
 }
 
+# Normalize offline-augmentation folder names to the labels shown on the site.
+OFFAUG_LABELS = {
+    "none": "none",
+    "AE_head_2": "AE",
+}
+
 copied = 0
 skipped: list[str] = []
 
@@ -39,9 +46,11 @@ skipped: list[str] = []
 def copy_one(src: Path, data_type: str, subtype: str, group_label: str,
              norm: str, offaug: str, param: str) -> None:
     global copied
+    offaug = OFFAUG_LABELS.get(offaug, offaug)
     dest = DEST_ROOT / data_type / subtype / group_label / norm / offaug / param / PLOT_FILE
     dest.parent.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(src, dest)
+    # Copy while removing the redundant embedded figure title.
+    dest.write_text(strip_title(src.read_text(encoding="utf-8")), encoding="utf-8")
     copied += 1
 
 

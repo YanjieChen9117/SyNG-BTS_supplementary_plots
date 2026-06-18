@@ -42,7 +42,7 @@
     },
     {
       "key": "normalization",
-      "label": "Normalization",
+      "label": "Normalization method",
       "values": [
         "raw",
         "TC",
@@ -51,7 +51,7 @@
     },
     {
       "key": "param",
-      "label": "Parameters",
+      "label": "Augmentation model parameters",
       "values": [
         "CVAE1-5",
         "CVAE1-10",
@@ -65,8 +65,8 @@
       "key": "offaug",
       "label": "Offline augmentation",
       "values": [
-        "none",
-        "AE_head_2"
+        "AE",
+        "none"
       ]
     }
   ],
@@ -76,27 +76,27 @@
       "subtype": "COAD",
       "normalization": "DESeq",
       "param": "CVAE1-100",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/DESeq/AE_head_2/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/DESeq/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
       "normalization": "DESeq",
       "param": "CVAE1-200",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/DESeq/AE_head_2/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/DESeq/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
       "normalization": "DESeq",
       "param": "CVAE1-50",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/DESeq/AE_head_2/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/DESeq/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
@@ -130,27 +130,27 @@
       "subtype": "COAD",
       "normalization": "TC",
       "param": "CVAE1-100",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/TC/AE_head_2/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/TC/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
       "normalization": "TC",
       "param": "CVAE1-200",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/TC/AE_head_2/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/TC/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
       "normalization": "TC",
       "param": "CVAE1-50",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/TC/AE_head_2/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/TC/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
@@ -184,27 +184,27 @@
       "subtype": "COAD",
       "normalization": "raw",
       "param": "CVAE1-100",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/raw/AE_head_2/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/raw/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
       "normalization": "raw",
       "param": "CVAE1-200",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/raw/AE_head_2/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/raw/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
       "normalization": "raw",
       "param": "CVAE1-50",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "tumor_status",
-      "path": "plots/RNA/COAD/tumor_status/raw/AE_head_2/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/raw/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
@@ -238,27 +238,27 @@
       "subtype": "SKCM",
       "normalization": "DESeq",
       "param": "CVAE1-100",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE_head_2/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
       "normalization": "DESeq",
       "param": "CVAE1-200",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE_head_2/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
       "normalization": "DESeq",
       "param": "CVAE1-50",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE_head_2/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
@@ -292,27 +292,27 @@
       "subtype": "SKCM",
       "normalization": "TC",
       "param": "CVAE1-100",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE_head_2/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
       "normalization": "TC",
       "param": "CVAE1-200",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE_head_2/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
       "normalization": "TC",
       "param": "CVAE1-50",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE_head_2/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
@@ -346,27 +346,27 @@
       "subtype": "SKCM",
       "normalization": "raw",
       "param": "CVAE1-100",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE_head_2/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
       "normalization": "raw",
       "param": "CVAE1-200",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE_head_2/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
       "normalization": "raw",
       "param": "CVAE1-50",
-      "offaug": "AE_head_2",
+      "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE_head_2/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",

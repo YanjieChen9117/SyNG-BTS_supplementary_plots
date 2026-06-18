@@ -31,8 +31,8 @@ OUTPUT = ROOT / "manifest.json"
 DIMENSIONS = [
     {"key": "data_type", "label": "Data type"},
     {"key": "subtype", "label": "Cancer subtype"},
-    {"key": "normalization", "label": "Normalization"},
-    {"key": "param", "label": "Parameters"},
+    {"key": "normalization", "label": "Normalization method"},
+    {"key": "param", "label": "Augmentation model parameters"},
     {"key": "offaug", "label": "Offline augmentation"},
 ]
 
@@ -40,7 +40,7 @@ DIMENSIONS = [
 PREFERRED_ORDER = {
     "data_type": ["RNA", "miRNA"],
     "normalization": ["raw", "TC", "DESeq"],
-    "offaug": ["none", "AE_head_2"],
+    "offaug": ["AE", "none"],
 }
 
 
