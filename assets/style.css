@@ -11,6 +11,10 @@
 
 * { box-sizing: border-box; }
 
+/* Ensure the `hidden` attribute always wins over explicit `display` rules
+   (e.g. .placeholder uses display:flex, #plot uses display:block). */
+[hidden] { display: none !important; }
+
 html, body {
   margin: 0;
   padding: 0;
@@ -53,7 +57,31 @@ html, body {
   box-shadow: var(--shadow);
 }
 
-.controls h2 { margin: 0 0 16px; font-size: 1.05rem; }
+.controls h2 { margin: 0; font-size: 1.05rem; }
+
+.controls-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.reset-btn {
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--muted);
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.12s ease;
+}
+
+.reset-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
 
 .selectors { display: flex; flex-direction: column; gap: 16px; }
 

@@ -27,7 +27,13 @@
     info: document.getElementById("dataset-info"),
     infoSampleSize: document.getElementById("info-sample-size"),
     infoMarkerDim: document.getElementById("info-marker-dim"),
+    resetBtn: document.getElementById("reset-btn"),
   };
+
+  function resetSelection() {
+    for (const d of state.dims) state.selected[d.key] = undefined;
+    render();
+  }
 
   function dimValues(dim) {
     return dim.values || [];
@@ -166,6 +172,7 @@
     }
 
     els.footerCount.textContent = `${manifest.count} plots indexed`;
+    els.resetBtn.addEventListener("click", resetSelection);
     render();
   }
 
