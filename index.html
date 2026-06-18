@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SyNG-BTS Supplementary Plots</title>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h1>SyNG-BTS Supplementary Plots</h1>
+      <p class="subtitle">
+        Interactive learning-curve figures that did not fit in the main SyNG-BTS paper.
+        Pick a configuration below to display the corresponding plot.
+      </p>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="controls" id="controls">
+      <h2>Select configuration</h2>
+      <div id="selectors" class="selectors"><!-- selectors injected by app.js --></div>
+      <div class="status" id="status"></div>
+    </aside>
+
+    <section class="viewer">
+      <div class="viewer-caption" id="caption"></div>
+      <div class="plot-frame" id="plot-frame">
+        <div class="placeholder" id="placeholder">Loading…</div>
+        <iframe id="plot" title="Plot" loading="lazy" hidden></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span id="footer-count"></span>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

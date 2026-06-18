@@ -1,0 +1,388 @@
+{
+  "plot_type": "learning_curve",
+  "count": 36,
+  "dimensions": [
+    {
+      "key": "data_type",
+      "label": "Data type"
+    },
+    {
+      "key": "subtype",
+      "label": "Cancer subtype"
+    },
+    {
+      "key": "normalization",
+      "label": "Normalization"
+    },
+    {
+      "key": "param",
+      "label": "Parameters"
+    },
+    {
+      "key": "offaug",
+      "label": "Offline augmentation"
+    }
+  ],
+  "plots": [
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "DESeq",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/DESeq/offaug_AE_head_2/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "DESeq",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/DESeq/offaug_AE_head_2/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "DESeq",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/DESeq/offaug_AE_head_2/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "DESeq",
+      "offaug": "None",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/DESeq/offaug_none/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "DESeq",
+      "offaug": "None",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/DESeq/offaug_none/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "DESeq",
+      "offaug": "None",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/DESeq/offaug_none/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "TC",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/TC/offaug_AE_head_2/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "TC",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/TC/offaug_AE_head_2/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "TC",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/TC/offaug_AE_head_2/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "TC",
+      "offaug": "None",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/TC/offaug_none/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "TC",
+      "offaug": "None",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/TC/offaug_none/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "TC",
+      "offaug": "None",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/TC/offaug_none/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "raw",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/raw/offaug_AE_head_2/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "raw",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/raw/offaug_AE_head_2/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "raw",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/raw/offaug_AE_head_2/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "raw",
+      "offaug": "None",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/raw/offaug_none/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "raw",
+      "offaug": "None",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/raw/offaug_none/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "COAD",
+      "normalization": "raw",
+      "offaug": "None",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/COAD/raw/offaug_none/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "DESeq",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/DESeq/offaug_AE_head_2/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "DESeq",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/DESeq/offaug_AE_head_2/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "DESeq",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/DESeq/offaug_AE_head_2/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "DESeq",
+      "offaug": "None",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/DESeq/offaug_none/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "DESeq",
+      "offaug": "None",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/DESeq/offaug_none/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "DESeq",
+      "offaug": "None",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/DESeq/offaug_none/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "TC",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/TC/offaug_AE_head_2/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "TC",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/TC/offaug_AE_head_2/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "TC",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/TC/offaug_AE_head_2/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "TC",
+      "offaug": "None",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/TC/offaug_none/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "TC",
+      "offaug": "None",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/TC/offaug_none/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "TC",
+      "offaug": "None",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/TC/offaug_none/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "raw",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/raw/offaug_AE_head_2/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "raw",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/raw/offaug_AE_head_2/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "raw",
+      "offaug": "AE_head_2",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/raw/offaug_AE_head_2/CVAE1-50/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "raw",
+      "offaug": "None",
+      "param": "CVAE1-100",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/raw/offaug_none/CVAE1-100/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "raw",
+      "offaug": "None",
+      "param": "CVAE1-200",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/raw/offaug_none/CVAE1-200/learning_curve.html"
+    },
+    {
+      "data_type": "RNA",
+      "subtype": "SKCM",
+      "normalization": "raw",
+      "offaug": "None",
+      "param": "CVAE1-50",
+      "cohort": "fivesubtypes",
+      "model": "CVAE",
+      "path": "data/learning_curve_output/cohorts/fivesubtypes_rna_cvae/SKCM/raw/offaug_none/CVAE1-50/learning_curve.html"
+    }
+  ]
+}
