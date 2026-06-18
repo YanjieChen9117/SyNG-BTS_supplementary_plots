@@ -16,52 +16,57 @@
     footerCount: document.getElementById("footer-count"),
   };
 
-  function uniqueValues(plots, key) {
-    const seen = new Set();
-    const out = [];
-    for (const p of plots) {
-      if (!seen.has(p[key])) {
-        seen.add(p[key]);
-        out.push(p[key]);
-      }
-    }
-    return out;
+  function dimValues(dim) {
+    return dim.values || [];
   }
 
-  // Plots matching every selected dimension except the ones listed in `ignore`.
-  function plotsMatching(ignore) {
-    const ignoreSet = new Set(ignore || []);
-    return state.manifest.plots.filter((p) =>
-      state.dims.every(
-        (d) => ignoreSet.has(d.key) || p[d.key] === state.selected[d.key]
-      )
+  // Values reachable for a dimension given the currently selected data type.
+  // (Within each data type the configuration grid is complete, so we only need
+  // to constrain by data type — this avoids dead-ends when switching types.)
+  function availableValues(key) {
+    if (key === "data_type") {
+      return new Set(state.manifest.plots.map((p) => p.data_type));
+    }
+    const dt = state.selected.data_type;
+    return new Set(
+      state.manifest.plots.filter((p) => p.data_type === dt).map((p) => p[key])
     );
   }
 
-  // A value for `key` is available if some plot matches all OTHER selections.
-  function availableValues(key) {
-    const candidates = plotsMatching([key]);
-    return new Set(candidates.map((p) => p[key]));
+  // The single plot matching every current selection (or null).
+  function currentPlot() {
+    const matches = state.manifest.plots.filter((p) =>
+      state.dims.every((d) => p[d.key] === state.selected[d.key])
+    );
+    return matches.length ? matches[0] : null;
   }
 
-  function currentPlot() {
-    const matches = plotsMatching([]);
-    return matches.length === 1 ? matches[0] : null;
+  // Fix dimension `key` to `value`, then snap every other dimension to the
+  // nearest existing plot (the one sharing the most current selections).
+  function selectValue(key, value) {
+    const candidates = state.manifest.plots.filter((p) => p[key] === value);
+    if (!candidates.length) return;
+
+    let best = candidates[0];
+    let bestScore = -1;
+    for (const p of candidates) {
+      let score = 0;
+      for (const d of state.dims) {
+        if (d.key === key) continue;
+        if (p[d.key] === state.selected[d.key]) score++;
+      }
+      if (score > bestScore) {
+        bestScore = score;
+        best = p;
+      }
+    }
+    for (const d of state.dims) state.selected[d.key] = best[d.key];
+    render();
   }
 
   function render() {
-    // Repair any selection that became invalid after a change.
-    for (const d of state.dims) {
-      const avail = availableValues(d.key);
-      if (!avail.has(state.selected[d.key])) {
-        const firstAvail = [...avail][0];
-        if (firstAvail !== undefined) state.selected[d.key] = firstAvail;
-      }
-    }
-
     els.selectors.innerHTML = "";
     for (const d of state.dims) {
-      const allVals = uniqueValues(state.manifest.plots, d.key);
       const avail = availableValues(d.key);
 
       const field = document.createElement("div");
@@ -74,16 +79,13 @@
       const options = document.createElement("div");
       options.className = "options";
 
-      for (const val of allVals) {
+      for (const val of dimValues(d)) {
         const btn = document.createElement("button");
         btn.type = "button";
         btn.textContent = val;
         if (val === state.selected[d.key]) btn.classList.add("active");
         if (!avail.has(val)) btn.disabled = true;
-        btn.addEventListener("click", () => {
-          state.selected[d.key] = val;
-          render();
-        });
+        btn.addEventListener("click", () => selectValue(d.key, val));
         options.appendChild(btn);
       }
 
@@ -109,8 +111,8 @@
     els.caption.innerHTML =
       `<strong>${plot.data_type}</strong> · ${plot.subtype} · ${plot.normalization} · ` +
       `${plot.param} · offaug: ${plot.offaug}` +
-      (plot.cohort || plot.model
-        ? ` &nbsp;<span style="opacity:.7">(cohort: ${plot.cohort || "-"}, model: ${plot.model || "-"})</span>`
+      (plot.group_label
+        ? ` &nbsp;<span style="opacity:.7">(group label: ${plot.group_label})</span>`
         : "");
 
     els.placeholder.hidden = false;
@@ -132,7 +134,7 @@
       return;
     }
 
-    // Default selection from the first plot.
+    // Default selection = first plot (a guaranteed-valid combination).
     const first = manifest.plots[0];
     for (const d of state.dims) state.selected[d.key] = first[d.key];
 

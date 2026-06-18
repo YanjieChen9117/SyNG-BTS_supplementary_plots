@@ -7,9 +7,9 @@ augmentation) and the matching interactive Plotly figure is displayed.
 
 ## How it works
 
-- Each figure is a self-contained Plotly `learning_curve.html` living under
-  `data/learning_curve_output/cohorts/<group>/<subtype>/<norm>/offaug_<x>/<param>/`.
-- `manifest.json` is a flat index of every figure and its dimension values.
+- Each figure is a self-contained Plotly `learning_curve.html`.
+- `manifest.json` is a flat index of every figure plus the ordered list of
+  values for each selector dimension.
 - `index.html` + `assets/` read `manifest.json`, render the selectors, and load
   the chosen figure in an `<iframe>` (so all Plotly hover/zoom interactivity is
   preserved).
@@ -21,19 +21,32 @@ augmentation) and the matching interactive Plotly figure is displayed.
 ├── index.html              # the website entry point
 ├── assets/
 │   ├── style.css
-│   └── app.js              # builds selectors, cross-filters, loads plots
+│   └── app.js              # builds selectors, loads plots
 ├── manifest.json           # generated index of all plots (do not edit by hand)
-├── generate_manifest.py    # rebuild manifest.json by scanning data/
-└── data/
-    └── learning_curve_output/cohorts/<group>/<subtype>/<norm>/offaug_<x>/<param>/learning_curve.html
+├── generate_manifest.py    # rebuild manifest.json by scanning plots/
+├── scripts/
+│   └── migrate_batches.py  # one-off importer from the raw batch outputs
+└── plots/
+    └── <data_type>/<subtype>/<group_label>/<normalization>/<offaug>/<param>/learning_curve.html
 ```
 
-The `<group>` name is parsed as `<cohort>_<datatype>_<model>`
-(e.g. `fivesubtypes_rna_cvae` → cohort=`fivesubtypes`, data type=`RNA`, model=`CVAE`).
+Each path segment maps directly to a field:
+
+| Segment        | Meaning                          | Selector?            |
+|----------------|----------------------------------|----------------------|
+| `data_type`    | e.g. `RNA`, `miRNA`              | yes                  |
+| `subtype`      | cancer code, e.g. `SKCM`, `KIRP` | yes (Cancer subtype) |
+| `group_label`  | classification target            | no (shown as caption)|
+| `normalization`| `raw` / `TC` / `DESeq`           | yes                  |
+| `offaug`       | offline augmentation: `none`, `AE_head_2`, … | yes (Offline augmentation) |
+| `param`        | model config, e.g. `CVAE1-50`    | yes (Parameters)     |
+
+Data types that have no offline augmentation simply use `offaug = none`.
 
 ## Adding more plots
 
-1. Drop the new `learning_curve.html` files into the directory structure above.
+1. Place the new `learning_curve.html` files under `plots/` following the layout
+   above (only this HTML file is needed; the website ignores any sibling CSV/PNG).
 2. Regenerate the index:
 
    ```bash
@@ -42,8 +55,9 @@ The `<group>` name is parsed as `<cohort>_<datatype>_<model>`
 
 3. Commit and push. The site updates automatically.
 
-> If a future data source uses a different folder convention, adjust the parsing
-> logic in `generate_manifest.py` (the `parse_group` / `parse_offaug` helpers).
+> `scripts/migrate_batches.py` documents how the original `data/learning_curve_output_RNA`
+> and `data/learning_curve_output_miRNA` batches were imported. A future batch with a
+> different folder convention can be handled by adding a small importer there.
 
 ## Local preview
 
