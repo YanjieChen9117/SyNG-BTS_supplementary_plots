@@ -8,6 +8,15 @@
     currentSrc: null,
   };
 
+  // Configuration shown when the page first loads.
+  const DEFAULT_SELECTION = {
+    data_type: "miRNA",
+    subtype: "BLCA",
+    normalization: "raw",
+    param: "CVAE1-5",
+    offaug: "none",
+  };
+
   const els = {
     selectors: document.getElementById("selectors"),
     status: document.getElementById("status"),
@@ -15,6 +24,9 @@
     iframe: document.getElementById("plot"),
     placeholder: document.getElementById("placeholder"),
     footerCount: document.getElementById("footer-count"),
+    info: document.getElementById("dataset-info"),
+    infoSampleSize: document.getElementById("info-sample-size"),
+    infoMarkerDim: document.getElementById("info-marker-dim"),
   };
 
   function dimValues(dim) {
@@ -111,6 +123,7 @@
           ? `Select all ${total} options to display a plot (${chosen}/${total} chosen).`
           : "No plot available for this combination.";
       els.status.textContent = "";
+      els.info.hidden = true;
       return;
     }
 
@@ -129,6 +142,11 @@
     }
     els.placeholder.hidden = true;
     els.iframe.hidden = false;
+
+    // Dataset difficulty panel (only meaningful once the full set is chosen).
+    els.infoSampleSize.textContent = plot.sample_size != null ? plot.sample_size : "—";
+    els.infoMarkerDim.textContent = plot.marker_dim != null ? plot.marker_dim : "—";
+    els.info.hidden = false;
   }
 
   function init(manifest) {
@@ -140,8 +158,12 @@
       return;
     }
 
-    // Start with nothing selected; the plot appears once a full set is chosen.
-    for (const d of state.dims) state.selected[d.key] = undefined;
+    // Apply the default configuration (falling back to unselected if a default
+    // value is not present in the data).
+    for (const d of state.dims) {
+      const def = DEFAULT_SELECTION[d.key];
+      state.selected[d.key] = dimValues(d).includes(def) ? def : undefined;
+    }
 
     els.footerCount.textContent = `${manifest.count} plots indexed`;
     render();

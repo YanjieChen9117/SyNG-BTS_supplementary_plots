@@ -11,8 +11,10 @@
     <div class="header-inner">
       <h1>SyNG-BTS Supplementary Plots</h1>
       <p class="subtitle">
-        Interactive learning-curve figures that did not fit in the main SyNG-BTS paper.
-        Pick a configuration below to display the corresponding plot.
+        Each figure shows classifier performance across a range of training sample sizes.
+        The red curves (left) show performance on real patient data, while the blue curves
+        (right) show performance on augmented data. The closer the two are, the better the
+        data-augmentation model performs.
       </p>
     </div>
   </header>
@@ -22,6 +24,14 @@
       <h2>Select configuration</h2>
       <div id="selectors" class="selectors"><!-- selectors injected by app.js --></div>
       <div class="status" id="status"></div>
+      <div class="info-box" id="dataset-info" hidden>
+        <h3>Augmentation difficulty</h3>
+        <dl>
+          <div class="info-row"><dt>Sample size</dt><dd id="info-sample-size">—</dd></div>
+          <div class="info-row"><dt>Marker dimension</dt><dd id="info-marker-dim">—</dd></div>
+        </dl>
+        <p class="info-hint">Smaller sample sizes and higher marker dimensions make augmentation harder.</p>
+      </div>
     </aside>
 
     <section class="viewer">
