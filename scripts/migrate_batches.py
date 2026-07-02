@@ -3,7 +3,7 @@
 
 Source batches (different layouts):
 
-  data/learning_curve_output_RNA/cohorts/fivesubtypes_rna_cvae/
+  learning_curve_output_full_cohort/cohorts/fivesubtypes_rna_cvae_full_cohort/
       <subtype>/<norm>/offaug_<x>/<param>/learning_curve.html        (has offaug)
 
   data/learning_curve_output_miRNA/
@@ -55,7 +55,7 @@ def copy_one(src: Path, data_type: str, subtype: str, group_label: str,
 
 
 def migrate_rna() -> None:
-    base = DATA / "learning_curve_output_RNA" / "cohorts" / "fivesubtypes_rna_cvae"
+    base = ROOT / "learning_curve_output_full_cohort" / "cohorts" / "fivesubtypes_rna_cvae_full_cohort"
     if not base.is_dir():
         print(f"[RNA] base not found, skipping: {base}")
         return
@@ -65,8 +65,11 @@ def migrate_rna() -> None:
             skipped.append(str(html))
             continue
         subtype, norm, offaug_dir, param, _ = rel
+        if subtype not in RNA_GROUP_LABELS:
+            skipped.append(str(html))
+            continue
         offaug = offaug_dir[len("offaug_"):] if offaug_dir.startswith("offaug_") else offaug_dir
-        group_label = RNA_GROUP_LABELS.get(subtype, "unknown")
+        group_label = RNA_GROUP_LABELS[subtype]
         copy_one(html, "RNA", subtype, group_label, norm, offaug, param)
 
 
