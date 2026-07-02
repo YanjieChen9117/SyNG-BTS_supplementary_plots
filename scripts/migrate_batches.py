@@ -20,6 +20,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from add_classifier_menu import transform_html
 from strip_titles import strip_title
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -59,8 +60,8 @@ def copy_one(src: Path, data_type: str, subtype: str, group_label: str,
     offaug = OFFAUG_LABELS.get(offaug, offaug)
     dest = DEST_ROOT / data_type / subtype / group_label / norm / offaug / param / PLOT_FILE
     dest.parent.mkdir(parents=True, exist_ok=True)
-    # Copy while removing the redundant embedded figure title.
-    dest.write_text(strip_title(src.read_text(encoding="utf-8")), encoding="utf-8")
+    html = strip_title(src.read_text(encoding="utf-8"))
+    dest.write_text(transform_html(html, path=dest), encoding="utf-8")
     copied += 1
 
 
