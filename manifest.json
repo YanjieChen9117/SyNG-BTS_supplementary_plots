@@ -44,7 +44,7 @@
       "key": "normalization",
       "label": "Normalization method",
       "values": [
-        "raw",
+        "none",
         "TC",
         "DESeq"
       ]
@@ -206,68 +206,68 @@
     {
       "data_type": "RNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-100",
       "offaug": "AE",
       "group_label": "tumor_status",
       "sample_size": "467",
       "marker_dim": "723",
-      "path": "plots/RNA/COAD/tumor_status/raw/AE/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/none/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-200",
       "offaug": "AE",
       "group_label": "tumor_status",
       "sample_size": "467",
       "marker_dim": "723",
-      "path": "plots/RNA/COAD/tumor_status/raw/AE/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/none/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-50",
       "offaug": "AE",
       "group_label": "tumor_status",
       "sample_size": "467",
       "marker_dim": "723",
-      "path": "plots/RNA/COAD/tumor_status/raw/AE/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/none/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-100",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "467",
       "marker_dim": "723",
-      "path": "plots/RNA/COAD/tumor_status/raw/none/CVAE1-100/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/none/none/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-200",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "467",
       "marker_dim": "723",
-      "path": "plots/RNA/COAD/tumor_status/raw/none/CVAE1-200/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/none/none/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-50",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "467",
       "marker_dim": "723",
-      "path": "plots/RNA/COAD/tumor_status/raw/none/CVAE1-50/learning_curve.html"
+      "path": "plots/RNA/COAD/tumor_status/none/none/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
@@ -277,7 +277,7 @@
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE/CVAE1-100/learning_curve.html"
     },
     {
@@ -288,7 +288,7 @@
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE/CVAE1-200/learning_curve.html"
     },
     {
@@ -299,7 +299,7 @@
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/AE/CVAE1-50/learning_curve.html"
     },
     {
@@ -310,7 +310,7 @@
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/none/CVAE1-100/learning_curve.html"
     },
     {
@@ -321,7 +321,7 @@
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/none/CVAE1-200/learning_curve.html"
     },
     {
@@ -332,7 +332,7 @@
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/DESeq/none/CVAE1-50/learning_curve.html"
     },
     {
@@ -343,7 +343,7 @@
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE/CVAE1-100/learning_curve.html"
     },
     {
@@ -354,7 +354,7 @@
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE/CVAE1-200/learning_curve.html"
     },
     {
@@ -365,7 +365,7 @@
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/AE/CVAE1-50/learning_curve.html"
     },
     {
@@ -376,7 +376,7 @@
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/none/CVAE1-100/learning_curve.html"
     },
     {
@@ -387,7 +387,7 @@
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/none/CVAE1-200/learning_curve.html"
     },
     {
@@ -398,74 +398,74 @@
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
+      "marker_dim": "1091",
       "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/TC/none/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-100",
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE/CVAE1-100/learning_curve.html"
+      "marker_dim": "1091",
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/none/AE/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-200",
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE/CVAE1-200/learning_curve.html"
+      "marker_dim": "1091",
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/none/AE/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-50",
       "offaug": "AE",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/AE/CVAE1-50/learning_curve.html"
+      "marker_dim": "1091",
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/none/AE/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-100",
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/none/CVAE1-100/learning_curve.html"
+      "marker_dim": "1091",
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/none/none/CVAE1-100/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-200",
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/none/CVAE1-200/learning_curve.html"
+      "marker_dim": "1091",
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/none/none/CVAE1-200/learning_curve.html"
     },
     {
       "data_type": "RNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-50",
       "offaug": "none",
       "group_label": "breslow_thickness_at_diagnosis",
       "sample_size": "361",
-      "marker_dim": "448",
-      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/raw/none/CVAE1-50/learning_curve.html"
+      "marker_dim": "1091",
+      "path": "plots/RNA/SKCM/breslow_thickness_at_diagnosis/none/none/CVAE1-50/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -536,35 +536,35 @@
     {
       "data_type": "miRNA",
       "subtype": "BLCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "histologic_subtype",
       "sample_size": "432",
       "marker_dim": "503",
-      "path": "plots/miRNA/BLCA/histologic_subtype/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/BLCA/histologic_subtype/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "BLCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "histologic_subtype",
       "sample_size": "432",
       "marker_dim": "503",
-      "path": "plots/miRNA/BLCA/histologic_subtype/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/BLCA/histologic_subtype/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "BLCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "histologic_subtype",
       "sample_size": "432",
       "marker_dim": "503",
-      "path": "plots/miRNA/BLCA/histologic_subtype/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/BLCA/histologic_subtype/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -635,35 +635,35 @@
     {
       "data_type": "miRNA",
       "subtype": "BRCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "breast_carcinoma_estrogen_receptor_status",
       "sample_size": "1144",
       "marker_dim": "570",
-      "path": "plots/miRNA/BRCA/breast_carcinoma_estrogen_receptor_status/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/BRCA/breast_carcinoma_estrogen_receptor_status/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "BRCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "breast_carcinoma_estrogen_receptor_status",
       "sample_size": "1144",
       "marker_dim": "570",
-      "path": "plots/miRNA/BRCA/breast_carcinoma_estrogen_receptor_status/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/BRCA/breast_carcinoma_estrogen_receptor_status/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "BRCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "breast_carcinoma_estrogen_receptor_status",
       "sample_size": "1144",
       "marker_dim": "570",
-      "path": "plots/miRNA/BRCA/breast_carcinoma_estrogen_receptor_status/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/BRCA/breast_carcinoma_estrogen_receptor_status/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -734,35 +734,35 @@
     {
       "data_type": "miRNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "414",
       "marker_dim": "351",
-      "path": "plots/miRNA/COAD/tumor_status/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/COAD/tumor_status/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "414",
       "marker_dim": "351",
-      "path": "plots/miRNA/COAD/tumor_status/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/COAD/tumor_status/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "COAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "414",
       "marker_dim": "351",
-      "path": "plots/miRNA/COAD/tumor_status/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/COAD/tumor_status/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -833,35 +833,35 @@
     {
       "data_type": "miRNA",
       "subtype": "ESCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "icd_o_3_histology",
       "sample_size": "200",
       "marker_dim": "404",
-      "path": "plots/miRNA/ESCA/icd_o_3_histology/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/ESCA/icd_o_3_histology/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "ESCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "icd_o_3_histology",
       "sample_size": "200",
       "marker_dim": "404",
-      "path": "plots/miRNA/ESCA/icd_o_3_histology/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/ESCA/icd_o_3_histology/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "ESCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "icd_o_3_histology",
       "sample_size": "200",
       "marker_dim": "404",
-      "path": "plots/miRNA/ESCA/icd_o_3_histology/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/ESCA/icd_o_3_histology/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -932,35 +932,35 @@
     {
       "data_type": "miRNA",
       "subtype": "HNSC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "anatomic_organ_subdivision",
       "sample_size": "569",
       "marker_dim": "529",
-      "path": "plots/miRNA/HNSC/anatomic_organ_subdivision/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/HNSC/anatomic_organ_subdivision/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "HNSC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "anatomic_organ_subdivision",
       "sample_size": "569",
       "marker_dim": "529",
-      "path": "plots/miRNA/HNSC/anatomic_organ_subdivision/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/HNSC/anatomic_organ_subdivision/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "HNSC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "anatomic_organ_subdivision",
       "sample_size": "569",
       "marker_dim": "529",
-      "path": "plots/miRNA/HNSC/anatomic_organ_subdivision/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/HNSC/anatomic_organ_subdivision/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1031,35 +1031,35 @@
     {
       "data_type": "miRNA",
       "subtype": "KICH",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "lymph_nodes_examined",
       "sample_size": "91",
       "marker_dim": "416",
-      "path": "plots/miRNA/KICH/lymph_nodes_examined/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/KICH/lymph_nodes_examined/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "KICH",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "lymph_nodes_examined",
       "sample_size": "91",
       "marker_dim": "416",
-      "path": "plots/miRNA/KICH/lymph_nodes_examined/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/KICH/lymph_nodes_examined/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "KICH",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "lymph_nodes_examined",
       "sample_size": "91",
       "marker_dim": "416",
-      "path": "plots/miRNA/KICH/lymph_nodes_examined/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/KICH/lymph_nodes_examined/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1130,35 +1130,35 @@
     {
       "data_type": "miRNA",
       "subtype": "KIRC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "ajcc_pathologic_tumor_stage",
       "sample_size": "613",
       "marker_dim": "280",
-      "path": "plots/miRNA/KIRC/ajcc_pathologic_tumor_stage/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/KIRC/ajcc_pathologic_tumor_stage/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "KIRC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "ajcc_pathologic_tumor_stage",
       "sample_size": "613",
       "marker_dim": "280",
-      "path": "plots/miRNA/KIRC/ajcc_pathologic_tumor_stage/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/KIRC/ajcc_pathologic_tumor_stage/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "KIRC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "ajcc_pathologic_tumor_stage",
       "sample_size": "613",
       "marker_dim": "280",
-      "path": "plots/miRNA/KIRC/ajcc_pathologic_tumor_stage/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/KIRC/ajcc_pathologic_tumor_stage/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1229,35 +1229,35 @@
     {
       "data_type": "miRNA",
       "subtype": "KIRP",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "ajcc_pathologic_tumor_stage",
       "sample_size": "295",
       "marker_dim": "481",
-      "path": "plots/miRNA/KIRP/ajcc_pathologic_tumor_stage/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/KIRP/ajcc_pathologic_tumor_stage/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "KIRP",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "ajcc_pathologic_tumor_stage",
       "sample_size": "295",
       "marker_dim": "481",
-      "path": "plots/miRNA/KIRP/ajcc_pathologic_tumor_stage/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/KIRP/ajcc_pathologic_tumor_stage/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "KIRP",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "ajcc_pathologic_tumor_stage",
       "sample_size": "295",
       "marker_dim": "481",
-      "path": "plots/miRNA/KIRP/ajcc_pathologic_tumor_stage/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/KIRP/ajcc_pathologic_tumor_stage/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1328,35 +1328,35 @@
     {
       "data_type": "miRNA",
       "subtype": "LAML",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "wbc_24hr_of_banking",
       "sample_size": "187",
       "marker_dim": "391",
-      "path": "plots/miRNA/LAML/wbc_24hr_of_banking/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/LAML/wbc_24hr_of_banking/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LAML",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "wbc_24hr_of_banking",
       "sample_size": "187",
       "marker_dim": "391",
-      "path": "plots/miRNA/LAML/wbc_24hr_of_banking/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/LAML/wbc_24hr_of_banking/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LAML",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "wbc_24hr_of_banking",
       "sample_size": "187",
       "marker_dim": "391",
-      "path": "plots/miRNA/LAML/wbc_24hr_of_banking/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/LAML/wbc_24hr_of_banking/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1427,35 +1427,35 @@
     {
       "data_type": "miRNA",
       "subtype": "LIHC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "platelet_norm_range_lower",
       "sample_size": "352",
       "marker_dim": "590",
-      "path": "plots/miRNA/LIHC/platelet_norm_range_lower/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/LIHC/platelet_norm_range_lower/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LIHC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "platelet_norm_range_lower",
       "sample_size": "352",
       "marker_dim": "590",
-      "path": "plots/miRNA/LIHC/platelet_norm_range_lower/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/LIHC/platelet_norm_range_lower/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LIHC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "platelet_norm_range_lower",
       "sample_size": "352",
       "marker_dim": "590",
-      "path": "plots/miRNA/LIHC/platelet_norm_range_lower/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/LIHC/platelet_norm_range_lower/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1526,35 +1526,35 @@
     {
       "data_type": "miRNA",
       "subtype": "LUAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "557",
       "marker_dim": "334",
-      "path": "plots/miRNA/LUAD/initial_pathologic_dx_year/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/LUAD/initial_pathologic_dx_year/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LUAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "557",
       "marker_dim": "334",
-      "path": "plots/miRNA/LUAD/initial_pathologic_dx_year/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/LUAD/initial_pathologic_dx_year/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LUAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "557",
       "marker_dim": "334",
-      "path": "plots/miRNA/LUAD/initial_pathologic_dx_year/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/LUAD/initial_pathologic_dx_year/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1625,35 +1625,35 @@
     {
       "data_type": "miRNA",
       "subtype": "LUSC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "516",
       "marker_dim": "630",
-      "path": "plots/miRNA/LUSC/initial_pathologic_dx_year/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/LUSC/initial_pathologic_dx_year/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LUSC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "516",
       "marker_dim": "630",
-      "path": "plots/miRNA/LUSC/initial_pathologic_dx_year/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/LUSC/initial_pathologic_dx_year/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "LUSC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "516",
       "marker_dim": "630",
-      "path": "plots/miRNA/LUSC/initial_pathologic_dx_year/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/LUSC/initial_pathologic_dx_year/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1724,35 +1724,35 @@
     {
       "data_type": "miRNA",
       "subtype": "OV",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "tumor_residual_disease",
       "sample_size": "502",
       "marker_dim": "452",
-      "path": "plots/miRNA/OV/tumor_residual_disease/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/OV/tumor_residual_disease/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "OV",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "tumor_residual_disease",
       "sample_size": "502",
       "marker_dim": "452",
-      "path": "plots/miRNA/OV/tumor_residual_disease/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/OV/tumor_residual_disease/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "OV",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "tumor_residual_disease",
       "sample_size": "502",
       "marker_dim": "452",
-      "path": "plots/miRNA/OV/tumor_residual_disease/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/OV/tumor_residual_disease/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1823,35 +1823,35 @@
     {
       "data_type": "miRNA",
       "subtype": "PAAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "anatomic_neoplasm_subdivision",
       "sample_size": "183",
       "marker_dim": "423",
-      "path": "plots/miRNA/PAAD/anatomic_neoplasm_subdivision/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/PAAD/anatomic_neoplasm_subdivision/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "PAAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "anatomic_neoplasm_subdivision",
       "sample_size": "183",
       "marker_dim": "423",
-      "path": "plots/miRNA/PAAD/anatomic_neoplasm_subdivision/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/PAAD/anatomic_neoplasm_subdivision/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "PAAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "anatomic_neoplasm_subdivision",
       "sample_size": "183",
       "marker_dim": "423",
-      "path": "plots/miRNA/PAAD/anatomic_neoplasm_subdivision/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/PAAD/anatomic_neoplasm_subdivision/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -1922,35 +1922,35 @@
     {
       "data_type": "miRNA",
       "subtype": "PCPG",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "primary_pathology_histological_type",
       "sample_size": "187",
       "marker_dim": "417",
-      "path": "plots/miRNA/PCPG/primary_pathology_histological_type/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/PCPG/primary_pathology_histological_type/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "PCPG",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "primary_pathology_histological_type",
       "sample_size": "187",
       "marker_dim": "417",
-      "path": "plots/miRNA/PCPG/primary_pathology_histological_type/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/PCPG/primary_pathology_histological_type/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "PCPG",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "primary_pathology_histological_type",
       "sample_size": "187",
       "marker_dim": "417",
-      "path": "plots/miRNA/PCPG/primary_pathology_histological_type/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/PCPG/primary_pathology_histological_type/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2021,35 +2021,35 @@
     {
       "data_type": "miRNA",
       "subtype": "PRAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "icd_o_3_histology",
       "sample_size": "536",
       "marker_dim": "287",
-      "path": "plots/miRNA/PRAD/icd_o_3_histology/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/PRAD/icd_o_3_histology/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "PRAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "icd_o_3_histology",
       "sample_size": "536",
       "marker_dim": "287",
-      "path": "plots/miRNA/PRAD/icd_o_3_histology/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/PRAD/icd_o_3_histology/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "PRAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "icd_o_3_histology",
       "sample_size": "536",
       "marker_dim": "287",
-      "path": "plots/miRNA/PRAD/icd_o_3_histology/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/PRAD/icd_o_3_histology/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2120,35 +2120,35 @@
     {
       "data_type": "miRNA",
       "subtype": "READ",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "144",
       "marker_dim": "387",
-      "path": "plots/miRNA/READ/tumor_status/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/READ/tumor_status/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "READ",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "144",
       "marker_dim": "387",
-      "path": "plots/miRNA/READ/tumor_status/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/READ/tumor_status/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "READ",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "tumor_status",
       "sample_size": "144",
       "marker_dim": "387",
-      "path": "plots/miRNA/READ/tumor_status/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/READ/tumor_status/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2219,35 +2219,35 @@
     {
       "data_type": "miRNA",
       "subtype": "SARC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "primary_pathology_histological_type",
       "sample_size": "263",
       "marker_dim": "225",
-      "path": "plots/miRNA/SARC/primary_pathology_histological_type/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/SARC/primary_pathology_histological_type/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "SARC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "primary_pathology_histological_type",
       "sample_size": "263",
       "marker_dim": "225",
-      "path": "plots/miRNA/SARC/primary_pathology_histological_type/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/SARC/primary_pathology_histological_type/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "SARC",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "primary_pathology_histological_type",
       "sample_size": "263",
       "marker_dim": "225",
-      "path": "plots/miRNA/SARC/primary_pathology_histological_type/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/SARC/primary_pathology_histological_type/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2318,35 +2318,35 @@
     {
       "data_type": "miRNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "449",
       "marker_dim": "630",
-      "path": "plots/miRNA/SKCM/initial_pathologic_dx_year/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/SKCM/initial_pathologic_dx_year/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "449",
       "marker_dim": "630",
-      "path": "plots/miRNA/SKCM/initial_pathologic_dx_year/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/SKCM/initial_pathologic_dx_year/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "SKCM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "449",
       "marker_dim": "630",
-      "path": "plots/miRNA/SKCM/initial_pathologic_dx_year/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/SKCM/initial_pathologic_dx_year/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2417,35 +2417,35 @@
     {
       "data_type": "miRNA",
       "subtype": "STAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "prospective_collection",
       "sample_size": "490",
       "marker_dim": "446",
-      "path": "plots/miRNA/STAD/prospective_collection/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/STAD/prospective_collection/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "STAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "prospective_collection",
       "sample_size": "490",
       "marker_dim": "446",
-      "path": "plots/miRNA/STAD/prospective_collection/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/STAD/prospective_collection/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "STAD",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "prospective_collection",
       "sample_size": "490",
       "marker_dim": "446",
-      "path": "plots/miRNA/STAD/prospective_collection/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/STAD/prospective_collection/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2516,35 +2516,35 @@
     {
       "data_type": "miRNA",
       "subtype": "TGCT",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "histologic_diagnosis",
       "sample_size": "139",
       "marker_dim": "522",
-      "path": "plots/miRNA/TGCT/histologic_diagnosis/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/TGCT/histologic_diagnosis/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "TGCT",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "histologic_diagnosis",
       "sample_size": "139",
       "marker_dim": "522",
-      "path": "plots/miRNA/TGCT/histologic_diagnosis/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/TGCT/histologic_diagnosis/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "TGCT",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "histologic_diagnosis",
       "sample_size": "139",
       "marker_dim": "522",
-      "path": "plots/miRNA/TGCT/histologic_diagnosis/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/TGCT/histologic_diagnosis/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2615,35 +2615,35 @@
     {
       "data_type": "miRNA",
       "subtype": "THCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "573",
       "marker_dim": "324",
-      "path": "plots/miRNA/THCA/initial_pathologic_dx_year/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/THCA/initial_pathologic_dx_year/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "THCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "573",
       "marker_dim": "324",
-      "path": "plots/miRNA/THCA/initial_pathologic_dx_year/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/THCA/initial_pathologic_dx_year/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "THCA",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "initial_pathologic_dx_year",
       "sample_size": "573",
       "marker_dim": "324",
-      "path": "plots/miRNA/THCA/initial_pathologic_dx_year/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/THCA/initial_pathologic_dx_year/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2714,35 +2714,35 @@
     {
       "data_type": "miRNA",
       "subtype": "THYM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "primary_pathology_history_myasthenia_gravis",
       "sample_size": "123",
       "marker_dim": "446",
-      "path": "plots/miRNA/THYM/primary_pathology_history_myasthenia_gravis/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/THYM/primary_pathology_history_myasthenia_gravis/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "THYM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "primary_pathology_history_myasthenia_gravis",
       "sample_size": "123",
       "marker_dim": "446",
-      "path": "plots/miRNA/THYM/primary_pathology_history_myasthenia_gravis/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/THYM/primary_pathology_history_myasthenia_gravis/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "THYM",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "primary_pathology_history_myasthenia_gravis",
       "sample_size": "123",
       "marker_dim": "446",
-      "path": "plots/miRNA/THYM/primary_pathology_history_myasthenia_gravis/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/THYM/primary_pathology_history_myasthenia_gravis/none/none/CVAE1-5/learning_curve.html"
     },
     {
       "data_type": "miRNA",
@@ -2813,35 +2813,35 @@
     {
       "data_type": "miRNA",
       "subtype": "UCS",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-10",
       "offaug": "none",
       "group_label": "primary_pathology_total_pelv_lnr",
       "sample_size": "57",
       "marker_dim": "330",
-      "path": "plots/miRNA/UCS/primary_pathology_total_pelv_lnr/raw/none/CVAE1-10/learning_curve.html"
+      "path": "plots/miRNA/UCS/primary_pathology_total_pelv_lnr/none/none/CVAE1-10/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "UCS",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-20",
       "offaug": "none",
       "group_label": "primary_pathology_total_pelv_lnr",
       "sample_size": "57",
       "marker_dim": "330",
-      "path": "plots/miRNA/UCS/primary_pathology_total_pelv_lnr/raw/none/CVAE1-20/learning_curve.html"
+      "path": "plots/miRNA/UCS/primary_pathology_total_pelv_lnr/none/none/CVAE1-20/learning_curve.html"
     },
     {
       "data_type": "miRNA",
       "subtype": "UCS",
-      "normalization": "raw",
+      "normalization": "none",
       "param": "CVAE1-5",
       "offaug": "none",
       "group_label": "primary_pathology_total_pelv_lnr",
       "sample_size": "57",
       "marker_dim": "330",
-      "path": "plots/miRNA/UCS/primary_pathology_total_pelv_lnr/raw/none/CVAE1-5/learning_curve.html"
+      "path": "plots/miRNA/UCS/primary_pathology_total_pelv_lnr/none/none/CVAE1-5/learning_curve.html"
     }
   ]
 }

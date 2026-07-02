@@ -8,7 +8,7 @@ Clean unified layout (one figure per leaf directory):
 - ``data_type``    e.g. RNA, miRNA
 - ``subtype``      cancer code, e.g. SKCM, COAD, KIRP
 - ``group_label``  classification target (shown as caption, not a selector)
-- ``normalization``raw / TC / DESeq
+- ``normalization``none / TC / DESeq
 - ``offaug``       offline augmentation: none / AE_head_2 / ...
 - ``param``        model config, e.g. CVAE1-50
 
@@ -40,7 +40,7 @@ DIMENSIONS = [
 # Preferred ordering for dimensions with a natural (non-alphabetical) order.
 PREFERRED_ORDER = {
     "data_type": ["miRNA", "RNA"],
-    "normalization": ["raw", "TC", "DESeq"],
+    "normalization": ["none", "TC", "DESeq"],
     "offaug": ["AE", "none"],
 }
 

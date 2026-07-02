@@ -33,7 +33,10 @@ RNA_GROUP_LABELS = {
     "SKCM": "breslow_thickness_at_diagnosis",
 }
 
-# Normalize offline-augmentation folder names to the labels shown on the site.
+# Normalize folder names to the labels shown on the site.
+NORM_LABELS = {
+    "raw": "none",
+}
 OFFAUG_LABELS = {
     "none": "none",
     "AE_head_2": "AE",
@@ -46,6 +49,7 @@ skipped: list[str] = []
 def copy_one(src: Path, data_type: str, subtype: str, group_label: str,
              norm: str, offaug: str, param: str) -> None:
     global copied
+    norm = NORM_LABELS.get(norm, norm)
     offaug = OFFAUG_LABELS.get(offaug, offaug)
     dest = DEST_ROOT / data_type / subtype / group_label / norm / offaug / param / PLOT_FILE
     dest.parent.mkdir(parents=True, exist_ok=True)

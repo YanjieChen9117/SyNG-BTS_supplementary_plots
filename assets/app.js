@@ -12,7 +12,7 @@
   const DEFAULT_SELECTION = {
     data_type: "miRNA",
     subtype: "BLCA",
-    normalization: "raw",
+    normalization: "none",
     param: "CVAE1-5",
     offaug: "none",
   };

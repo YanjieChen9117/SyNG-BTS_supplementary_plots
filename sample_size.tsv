@@ -26,5 +26,5 @@ UCS_primary_pathology_total_pelv_lnr	57	57	1881	1414	3.728	2.269	330	82.5
 RNA_COAD_tumor_status	524	467	60660	57567	5	2	723	98.8
 RNA_LAML_blast_count	151	151	60660	57508	5	2	850	98.6
 RNA_READ_ajcc_tumor_pathologic_pt	177	174	60660	54477	5	2	633	99
-RNA_SKCM_breslow_thickness_at_diagnosis	473	361	60660	57063	8	2	448	99.3
+RNA_SKCM_breslow_thickness_at_diagnosis	473	361	60660	57063	8	2	1091	99.3
 RNA_PAAD_ajcc_nodes_pathologic_pn	183	182	60660	55553	5	2	866	98.6
