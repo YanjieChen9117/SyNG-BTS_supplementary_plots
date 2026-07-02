@@ -42,6 +42,12 @@ OFFAUG_LABELS = {
     "AE_head_2": "AE",
 }
 
+# miRNA cohort folders re-generated at repo root (see README / import notes).
+RERUN_MIRNA_COHORTS = {
+    "READ_tumor_status": ("READ", "tumor_status"),
+    "LUAD_initial_pathologic_dx_year": ("LUAD", "initial_pathologic_dx_year"),
+}
+
 copied = 0
 skipped: list[str] = []
 
@@ -77,6 +83,22 @@ def migrate_rna() -> None:
         copy_one(html, "RNA", subtype, group_label, norm, offaug, param)
 
 
+def migrate_rerun_mirna() -> None:
+    """Import re-run miRNA figures from cohort folders at the repo root."""
+    for src_name, (cancer, group_label) in RERUN_MIRNA_COHORTS.items():
+        base = ROOT / src_name
+        if not base.is_dir():
+            print(f"[rerun] base not found, skipping: {base}")
+            continue
+        for html in sorted(base.rglob(PLOT_FILE)):
+            rel = html.relative_to(base).parts  # <norm>/<param>/learning_curve.html
+            if len(rel) != 3:
+                skipped.append(str(html))
+                continue
+            norm, param, _ = rel
+            copy_one(html, "miRNA", cancer, group_label, norm, "none", param)
+
+
 def migrate_mirna() -> None:
     base = DATA / "learning_curve_output_miRNA"
     if not base.is_dir():
@@ -97,6 +119,7 @@ def migrate_mirna() -> None:
 def main() -> None:
     migrate_rna()
     migrate_mirna()
+    migrate_rerun_mirna()
     print(f"Copied {copied} learning_curve.html files into {DEST_ROOT.relative_to(ROOT)}/")
     if skipped:
         print(f"Skipped {len(skipped)} unexpected paths:")
