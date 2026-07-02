@@ -73,6 +73,26 @@
     );
   }
 
+  // Match a plot against DEFAULT_SELECTION; normalization accepts raw/none alias.
+  function plotMatchesDefaults(plot) {
+    return state.dims.every((d) => {
+      const want = DEFAULT_SELECTION[d.key];
+      if (want == null) return true;
+      const got = plot[d.key];
+      if (d.key === "normalization") {
+        return got === want || (want === "none" && got === "raw") || (want === "raw" && got === "none");
+      }
+      return got === want;
+    });
+  }
+
+  function applyDefaultSelection() {
+    const plot = state.manifest.plots.find(plotMatchesDefaults);
+    if (!plot) return false;
+    for (const d of state.dims) state.selected[d.key] = plot[d.key];
+    return true;
+  }
+
   function toggleValue(key, value) {
     state.selected[key] = state.selected[key] === value ? undefined : value;
     render();
@@ -164,11 +184,14 @@
       return;
     }
 
-    // Apply the default configuration (falling back to unselected if a default
-    // value is not present in the data).
-    for (const d of state.dims) {
-      const def = DEFAULT_SELECTION[d.key];
-      state.selected[d.key] = dimValues(d).includes(def) ? def : undefined;
+    // Apply the default configuration by finding a matching plot so every
+    // dimension (including normalization) is set to a valid combination.
+    if (!applyDefaultSelection()) {
+      for (const d of state.dims) {
+        const def = DEFAULT_SELECTION[d.key];
+        state.selected[d.key] =
+          def != null && dimValues(d).includes(def) ? def : undefined;
+      }
     }
 
     els.footerCount.textContent = `${manifest.count} plots indexed`;
